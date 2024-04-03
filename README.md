@@ -39,6 +39,14 @@ Al començament vam aprendre una mica sobre què és l'XML i per a què serveix,
   </jugador>
 </jugadores>
 ```
+**Imatge sobre el conjunt de tecnologies que representen l'XML**
+
+
+
+
+![Imatge sobre el conjunt de tecnologies que representen l'XML](https://th.bing.com/th/id/R.c5344959c039e1864923aee43524226b?rik=6mYYPwkLLtSItQ&riu=http%3a%2f%2ftcpschool.com%2flectures%2fimg_xml_xdm.png&ehk=ZEblftyWuhbVtfziHdNtKaq3dPRwfiHL7SwWlSYKN1o%3d&risl=&pid=ImgRaw&r=0)
+
+
 
 ## Sobre DOM i XSLT: 
 
@@ -129,5 +137,8 @@ file.close()
 print("Horario disponible en: Horari_final_2.html")
 
 ```
+També hem après XSLT i XPATH, per a conseguir el mateix objectiu de treure les dades de l'XML i treballar amb aquestes per aconseguir el resultat desitjat, realitzant exercicis com el proposat [en aquest enllaç](https://docs.google.com/document/d/1N-hikCVcUrXkQ3fn056_M45mSgQBVP54A3Ivz0swL5M/edit). Poc a poc hem anat dominant-lo i ara ja podem fer un horari a la tasca de control i tots els exercicis plantejats amb èxit. 
+
+I així hem acabat, de moment, tots els conceptes del primer i segon trimestre de les dues assignatures. Esperem que el tercer trimestre ens doni més llenguatges i maneres d'aconseguir tots els objectius que necessitem assolir als exercicis. 
 
 
