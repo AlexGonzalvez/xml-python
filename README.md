@@ -38,7 +38,96 @@ Al començament vam aprendre una mica sobre què és l'XML i per a què serveix,
     <nacionalidad>española</nacionalidad>
   </jugador>
 </jugadores>
+```
 
-´´´
+## Sobre DOM i XSLT: 
+
+L'últim que hem après és utilitzar minidom i XSLT, i per a fer-ho hem estudiat la teoría i hem fet alguns exercicis. Aprendre sobre Python ha anat molt bé per a dominar amb una mica més de facilitat minidom. Minidom ens permet treballar amb fitxers XML per obtenir dades i afegir-les al document que necessitem. Això s'aconsegueix important minidom al nostre entorn Python i treballant amb aquest. A continuació es mostra un exemple d'exercici fet amb Minidom, amb el que havíem de fer un horari en el que havíem d'extreure les dades d'un XML: 
+
+**Exercici fet amb Minidom**
+
+```
+from xml.dom import minidom
+
+file=open("Horario_final_2.html", "w")
+file.write("<html><head><title>Horari de l'alumne</title></head><body>\n")
+
+doc=minidom.parse("Horario_xml_minidom.xml")
+
+tag_horari=doc.documentElement
+
+tag_alumne=tag_horari.getElementsByTagName('alumne')[0]
+
+nom=tag_alumne.getElementsByTagName('nom')[0].firstChild.data
+curs=tag_alumne.getElementsByTagName('curs')[0].firstChild.data
+foto=tag_alumne.getElementsByTagName('foto')[0].firstChild.data
+
+file.write(f'''<h1>{nom}</h1>
+<h1>{curs}</h1>
+<p><img src='{foto}' alt='Foto de l'alumne' width='100' height='100' />/<p>\n''')
+
+colors={}
+
+tag_colors=tag_horari.getElementsByTagName('colors')[0]
+
+for tag_assignatura in tag_colors.getElementsByTagName("assignatura"):
+    color=tag_assignatura.getAttribute('color')
+    assignatura=tag_assignatura.firstChild.data
+    colors[assignatura]=color
+    
+franjes=[]
+
+tag_franjes=tag_horari.getElementsByTagName('franges')[0]
+
+for tag_franja in tag_franjes.getElementsByTagName('franja'):
+    franja=tag_franja.firstChild.data
+    franjes.append(franja)
+
+dies=[]
+clases={}
+
+tag_clases=tag_horari.getElementsByTagName('classes')[0]
+
+for tag_dia in tag_clases.getElementsByTagName('dia'):
+    dia=tag_dia.getElementsByTagName("nom")[0].firstChild.data
+    dies.append(dia)
+    
+    clases[dia]=[]
+    
+    tag_assignatures=tag_dia.getElementsByTagName("assignatures")[0]
+    
+    for tag_assignatura in tag_assignatures.getElementsByTagName("assignatura"):
+        assignatura=tag_assignatura.firstChild.data
+        clases[dia].append(assignatura)
+
+
+file.write("<table border='1'>\n")
+
+file.write("<tr><th></th>")
+
+for dia in dies:
+    file.write(f"<th>{dia}</th>")
+
+file.write("</tr>\n")
+
+num_franjes=len(franjes)
+
+for i in range(num_franjes):
+    file.write ("<tr>\n")
+    file.write (f"\t<td>{franjes[i]}</td>\n")
+    for dia in dies:
+        assignatura=clases[dia][i]
+        file.write(f"\t<td style='background-color: {colors[assignatura]}'>{assignatura}</td>\n") #Aquest color és d'aquesta assignatura 
+    file.write("</tr>\n")
+
+file.write("</table>\n")
+
+file.write("</body></html>") 
+
+file.close()
+
+print("Horario disponible en: Horari_final_2.html")
+
+```
 
 
