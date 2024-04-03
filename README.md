@@ -1,10 +1,28 @@
 # xml-python
 
+En el següent repositori veurem un resum del que hem après en aquest curs sobre Python i XML, ara es presenta una llista ordenada del que es presenta:
+
+1. Sobre Python:
+  -Conceptes Bàsics
+  -Llistes, diccionaris i manipulació de fitxers
+
+2. Sobre XML:
+   -Conceptes Bàsics
+   -Sobre DOM i XSLT
+   
+Tot anirà acompanyat d'exemples de codi i imatges. 
+
 # Sobre Python
 
 ## Conceptes bàsics: 
 
 Hem vist com crear un programa bàsic en Python, començant poc a poc des del pseudocodi fins als bucles for i while. Això ho hem fet practicant amb diversos programes (exercicis) com per exemple, crear un programa de conversió d'unitats, o practicant els [range](https://www.w3schools.com/python/ref_func_range.asp) amb exercicis dedicats. 
+
+**Exemple de la utilització del bucle FOR a Python**:
+
+![Imatge sobre la utilització simple del bucle FOR](https://i.ytimg.com/vi/9LgyKiq_hU0/maxresdefault.jpg)
+
+
 
 ## Llistes, Diccionaris i manipulació de fitxers a Python:
 
@@ -40,8 +58,6 @@ Al començament vam aprendre una mica sobre què és l'XML i per a què serveix,
 </jugadores>
 ```
 **Imatge sobre el conjunt de tecnologies que representen l'XML**
-
-
 
 
 ![Imatge sobre el conjunt de tecnologies que representen l'XML](https://th.bing.com/th/id/R.c5344959c039e1864923aee43524226b?rik=6mYYPwkLLtSItQ&riu=http%3a%2f%2ftcpschool.com%2flectures%2fimg_xml_xdm.png&ehk=ZEblftyWuhbVtfziHdNtKaq3dPRwfiHL7SwWlSYKN1o%3d&risl=&pid=ImgRaw&r=0)
