@@ -1,14 +1,15 @@
 # xml-python
 
-En el següent repositori veurem un resum del que hem après en aquest curs sobre Python i XML, ara es presenta una llista ordenada del que es presenta:
+En el següent repositori veurem un resum del que hem après en aquest curs sobre Python i XML, ara es mostra una llista ordenada del que es presenta:
 
-1. Sobre Python:
-  -Conceptes Bàsics
-  -Llistes, diccionaris i manipulació de fitxers
+**1. Sobre Python**:
+   - Conceptes Bàsics
+   - Llistes, diccionaris i manipulació de fitxers
 
-2. Sobre XML:
-   -Conceptes Bàsics
-   -Sobre DOM i XSLT
+**2. Sobre XML**:
+   - Conceptes Bàsics
+   - Sobre DOM i XSLT
+
    
 Tot anirà acompanyat d'exemples de codi i imatges. 
 
